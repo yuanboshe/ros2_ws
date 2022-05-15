@@ -16,3 +16,5 @@ FROM yuanboshe/ros2:galactic-gazebo
 ARG WORKSPACE
 RUN echo "if [ -f ${WORKSPACE}/install/setup.bash ]; then source ${WORKSPACE}/install/setup.bash; fi" \
     >> /home/aicrobo/.bashrc
+
+USER aicrobo
