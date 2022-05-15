@@ -35,6 +35,7 @@
 		"ms-python.python",
 		"ms-python.vscode-pylance",
 		"ms-vscode.cpptools",
+		"ms-vscode.cmake-tools",
 		"redhat.vscode-yaml",
 		"smilerobotics.urdf",
 		"streetsidesoftware.code-spell-checker",
