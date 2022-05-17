@@ -1,5 +1,16 @@
 # aicrobo ros2_ws
 
+## 目录结构
+
+```
+.
+├── deploy.sh            #部署脚本
+├── README.md            #说明文档
+├── scripts              #相关命令脚本
+│   └── goin-aicrobo_ros2_ws.sh
+└── src                  #源代码放在src目录下
+```
+
 ## 部署环境
 
 ```bash
