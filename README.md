@@ -30,8 +30,7 @@ cd ~/ros2_ws && code .
 
 Step1: 将需要开发的ros2 package clone到src目录下
 ```bash
-cd ~/ros2_ws/src
-git clone <your resp url> #填写自己的远程库地址
+cd ~/ros2_ws/src && git clone <your resp url> #填写自己的远程库地址
 ```
 
 Step2: 安装ros2 package的依赖包
