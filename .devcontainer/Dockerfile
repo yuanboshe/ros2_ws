@@ -17,4 +17,5 @@ ARG WORKSPACE
 RUN echo "if [ -f ${WORKSPACE}/install/setup.bash ]; then source ${WORKSPACE}/install/setup.bash; fi" \
     >> /home/aicrobo/.bashrc
 
+WORKDIR /home/aicrobo/ros2_ws
 USER aicrobo

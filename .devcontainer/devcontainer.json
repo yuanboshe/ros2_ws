@@ -42,6 +42,6 @@
 		"twxs.cmake",
 		"yzhang.markdown-all-in-one"
 	],
-	"workspaceFolder": "${localWorkspaceFolder}",
-	"workspaceMount": "source=${localWorkspaceFolder},target=${localWorkspaceFolder},type=bind,consistency=cached"
+	"workspaceFolder": "/home/aicrobo/${localWorkspaceFolderBasename}",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/home/aicrobo/${localWorkspaceFolderBasename},type=bind,consistency=cached"
 }
