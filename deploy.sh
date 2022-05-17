@@ -4,10 +4,16 @@
 cd "$(dirname "$0")" || exit $?
 WORK_PATH=$(pwd)
 
+# Add goin-aicrobo_ros2_ws command to /usr/local/bin/
+sudo cp ./scripts/goin-aicrobo_ros2_ws.sh /usr/local/bin/goin-aicrobo_ros2_ws
+
+# Deploy folders
+mkdir src
+
 # Install vscode
 sudo wget http://vscode.cdn.azure.cn/stable/5554b12acf27056905806867f251c859323ff7e9/code_1.64.0-1643863948_amd64.deb -O /tmp/vscode.deb
-sudo dpkg -i /tmp/vscode.deb
-rm -rf /tmp/vscode.deb
+sudo apt install /tmp/vscode.deb
+sudo rm -rf /tmp/vscode.deb
 
 # Install vscode extensions
 code --install-extension ms-vscode-remote.remote-containers \
@@ -26,10 +32,4 @@ sudo apt install docker-ce -y
 sudo groupadd docker
 sudo gpasswd -a $USER docker
 echo "请重启计算机，以便docker权限生效！"
-#newgrp docker
-
-# Add goin-aicrobo_ros2_ws command to /usr/local/bin/
-sudo cp ./scripts/goin-aicrobo_ros2_ws.sh /usr/local/bin/goin-aicrobo_ros2_ws
-
-# Deploy folders
-mkdir src
+newgrp docker
