@@ -9,6 +9,11 @@ sudo wget http://vscode.cdn.azure.cn/stable/5554b12acf27056905806867f251c859323f
 sudo dpkg -i /tmp/vscode.deb
 rm -rf /tmp/vscode.deb
 
+# Install vscode extensions
+code --install-extension ms-vscode-remote.remote-containers \
+--install-extension yzhang.markdown-all-in-one \
+--install-extension foxundermoon.shell-format
+
 # Install docker
 sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
 curl -fsSL https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu/gpg | sudo apt-key add -
