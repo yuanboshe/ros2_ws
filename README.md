@@ -18,6 +18,7 @@
 cd ~ && git clone https://codeup.aliyun.com/aicrobo/aicans/ros2_ws.git
 
 #执行部署脚本，将会下载安装VSCode+Docker，并完成相关环境的部署工作。
+#注意：执行前务必保障磁盘剩余空间大于6G！
 cd ~/ros2_ws && ./deploy.sh
 ```
 
