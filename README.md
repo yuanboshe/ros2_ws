@@ -2,7 +2,7 @@
 
 ## 目录结构
 
-```
+```bash
 .
 ├── deploy.sh            #部署脚本
 ├── README.md            #说明文档
@@ -36,11 +36,11 @@ cd ~/ros2_ws && code .
 如果是首次"Reopen in Container"，系统会自动下载镜像，需要较长时间（1G多），具体进度点击右下角的"Starting Dev Container (show log)"查看，在底部TERMINAL窗口会显示操作进度，一切结束后会显示"Start: Run in container: cat /proc/????/environ"信息。
 
 判断vscode有没有进入容器，观察左下角的图标，显示"Dev Container"则表示此时在容器环境中运行vscode，代码开发必须在容器中进行。
-    
 
 ## 部署代码及编译
 
 Step1: 将需要开发的ros2 package clone到src目录下
+
 ```bash
 cd ~/ros2_ws/src && git clone <your resp url> #填写自己的远程库地址
 ```

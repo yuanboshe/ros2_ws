@@ -73,14 +73,14 @@
                     "source": " uncrustify",
                     "fileLocation": "relative",
                     "pattern": [
-                    /// just the file name message
+                        /// just the file name message
                         {
                             "regexp": "^(.*)'(.*)':",
                             "kind": "file",
                             "file": 2,
                             "message": 1
                         },
-                  ]
+                    ]
                 }
             ]
         },
@@ -191,7 +191,13 @@
         {
             "label": "lint all",
             "detail": "Run all linters.",
-            "dependsOn":["cppcheck", "cpplint", "lint_cmake", "xmllint", "uncrustify"],
+            "dependsOn": [
+                "cppcheck",
+                "cpplint",
+                "lint_cmake",
+                "xmllint",
+                "uncrustify"
+            ],
             "problemMatcher": []
         },
         // Workspace editing tasks
@@ -233,9 +239,9 @@
     ],
     "inputs": [
         {
-          "id": "package",
-          "type": "promptString",
-          "description": "Package name"
+            "id": "package",
+            "type": "promptString",
+            "description": "Package name"
         }
-      ]
+    ]
 }
