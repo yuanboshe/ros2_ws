@@ -13,6 +13,7 @@
 		"--security-opt=seccomp:unconfined",
 		"--security-opt=apparmor:unconfined",
 		"--volume=/tmp/.X11-unix:/tmp/.X11-unix",
+		"--device=/dev/ttyUSB0",
 		"--name=aicrobo_ros2_ws"
 	],
 	"containerEnv": {
@@ -40,7 +41,8 @@
 		"smilerobotics.urdf",
 		"streetsidesoftware.code-spell-checker",
 		"twxs.cmake",
-		"yzhang.markdown-all-in-one"
+		"yzhang.markdown-all-in-one",
+		"foxundermoon.shell-format"
 	],
 	"workspaceFolder": "/home/aicrobo/${localWorkspaceFolderBasename}",
 	"workspaceMount": "source=${localWorkspaceFolder},target=/home/aicrobo/${localWorkspaceFolderBasename},type=bind,consistency=cached"
