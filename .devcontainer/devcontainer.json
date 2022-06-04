@@ -13,7 +13,7 @@
 		"--security-opt=seccomp:unconfined",
 		"--security-opt=apparmor:unconfined",
 		"--volume=/tmp/.X11-unix:/tmp/.X11-unix",
-		"--device=/dev/ttyUSB0",
+		// "--device=/dev/ttyUSB0",
 		"--name=aicrobo_ros2_ws"
 	],
 	"containerEnv": {
