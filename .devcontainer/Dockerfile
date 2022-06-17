@@ -1,4 +1,6 @@
-FROM yuanboshe/ros2:galactic-gazebo
+# FROM yuanboshe/ros2:galactic-novnc AS base-image
+FROM yuanboshe/ros2:galactic-gazebo AS base-image
+FROM base-image
 
 # ** [Optional] Uncomment this section to install additional packages. **
 #
@@ -19,3 +21,7 @@ RUN echo "if [ -f ${WORKSPACE}/install/setup.bash ]; then source ${WORKSPACE}/in
 
 WORKDIR /home/aicrobo/ros2_ws
 USER aicrobo
+
+# uncomment if use novnc
+# RUN mkdir -p /home/aicrobo/.config/tint2
+# COPY --from=base-image /root/.config/tint2/tint2rc /home/aicrobo/.config/tint2/
