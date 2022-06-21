@@ -8,12 +8,12 @@
 	},
 	"remoteUser": "aicrobo",
 	"runArgs": [
-		"--network=host", // comment if use noVNC
+		"--network=host",
 		"--cap-add=SYS_PTRACE",
 		"--security-opt=seccomp:unconfined",
 		"--security-opt=apparmor:unconfined",
 		"--volume=/tmp/.X11-unix:/tmp/.X11-unix",
-		// "--publish=8081:8080", // uncomment if use noVNC
+		// "--publish=8081:8081", // uncomment if want to publish port (no need in network=host)
 		// "--device=/dev/ttyUSB0", // uncomment if connect real robot
 		"--name=aicrobo_ros2_ws"
 	],
