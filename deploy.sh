@@ -10,11 +10,6 @@ if [ -z $(which goin-aicrobo_ros2_ws) ]; then
     sudo cp ./scripts/goin-aicrobo_ros2_ws.sh /usr/local/bin/goin-aicrobo_ros2_ws
 fi
 
-# Deploy folders
-if [ ! -d ./src ]; then
-    mkdir src
-fi
-
 # Install vscode
 if [ -z $(which code) ]; then
     echo "Install code ..."

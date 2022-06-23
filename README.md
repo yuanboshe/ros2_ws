@@ -42,7 +42,13 @@ cd ~/ros2_ws && code .
 Step1: 将需要开发的ros2 package clone到src目录下
 
 ```bash
+#直接导入
 cd ~/ros2_ws/src && git clone <your resp url> #填写自己的远程库地址
+
+#vcs导入。对于私有库，需要事先配置ssh_rsa密钥
+vcs import src < src/vcs_repos/mini.repos
+#如果没有vcs工具，先安装
+sudo apt install python3-pip && pip install -U vcstool
 ```
 
 Step2: 安装ros2 package的依赖包

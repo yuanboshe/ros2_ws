@@ -1,0 +1,15 @@
+# List of repositories to use within your workspace
+# See https://github.com/dirk-thomas/vcstool
+repositories:
+  aicmodel_robase200:
+    type: git
+    url: git@codeup.aliyun.com:aicrobo/aicans/aicmodel_robase200.git
+    version: galactic-devel
+  aicrobo_controllers:
+    type: git
+    url: git@codeup.aliyun.com:aicrobo/aicans/aicrobo_controllers.git
+    version: galactic-devel
+  aichw_robase:
+    type: git
+    url: git@codeup.aliyun.com:aicrobo/aicans/aichw_robase.git
+    version: galactic-devel
