@@ -43,7 +43,8 @@
 		"streetsidesoftware.code-spell-checker",
 		"twxs.cmake",
 		"yzhang.markdown-all-in-one",
-		"foxundermoon.shell-format"
+		"foxundermoon.shell-format",
+		"llvm-vs-code-extensions.vscode-clangd"
 	],
 	"workspaceFolder": "/home/aicrobo/${localWorkspaceFolderBasename}",
 	"workspaceMount": "source=${localWorkspaceFolder},target=/home/aicrobo/${localWorkspaceFolderBasename},type=bind,consistency=cached"
