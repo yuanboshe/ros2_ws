@@ -15,3 +15,9 @@ code-server --install-extension llvm-vs-code-extensions.vscode-clangd \
 
 #cheshirekow.cmake-format的依赖
 pip install cmakelang
+
+#llvm-vs-code-extensions.vscode-clangd的依赖
+if [ -z $(which clangd) ]; then
+    sudo apt update
+    sudo apt install -y clangd
+fi
