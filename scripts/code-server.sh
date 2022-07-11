@@ -8,10 +8,12 @@ WORK_PATH=$(pwd)
 #cheshirekow.cmake-format: CMakeLists.txt格式化
 #mhutchie.git-graph: git graph
 #foxundermoon.shell-format: format shell
+#twxs.cmake: colorize cmake files
 code-server --install-extension llvm-vs-code-extensions.vscode-clangd \
     --install-extension cheshirekow.cmake-format \
     --install-extension mhutchie.git-graph \
-    --install-extension foxundermoon.shell-format
+    --install-extension foxundermoon.shell-format \
+    --install-extension twxs.cmake
 
 #cheshirekow.cmake-format的依赖
 pip install cmakelang
