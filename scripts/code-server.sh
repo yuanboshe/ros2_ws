@@ -9,17 +9,17 @@ WORK_PATH=$(pwd)
 #mhutchie.git-graph: git graph
 #foxundermoon.shell-format: format shell
 #twxs.cmake: colorize cmake files
+#ms-python.python: python format
+#redhat.vscode-yaml: yaml format
+#redhat.vscode-xml: xml format
 code-server --install-extension llvm-vs-code-extensions.vscode-clangd \
     --install-extension cheshirekow.cmake-format \
     --install-extension mhutchie.git-graph \
     --install-extension foxundermoon.shell-format \
-    --install-extension twxs.cmake
+    --install-extension twxs.cmake \
+    --install-extension ms-python.python \
+    --install-extension redhat.vscode-yaml \
+    --install-extension redhat.vscode-xml
 
 #cheshirekow.cmake-format的依赖
 pip install cmakelang
-
-#llvm-vs-code-extensions.vscode-clangd的依赖
-if [ -z $(which clangd) ]; then
-    sudo apt update
-    sudo apt install -y clangd
-fi
