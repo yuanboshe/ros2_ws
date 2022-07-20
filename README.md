@@ -26,4 +26,9 @@ vscode界面 -> Terminal菜单 -> Run Task -> (下拉框选择) build
 
 ### CPP format
 
-采用clang-format格式化代码，工程目录下的`.clang-format`是遵循ROS2规范的格式文件，装好插件后format CPP文件时会自动调用。
+采用clang-format格式化代码，工程目录下的`.clang-format`是遵循ROS2规范的格式文件，装好插件后format CPP文件时会自动调用。（效果和`ament_clang_format`一致）
+
+```bash
+#用标准的格式format当前路径下所有CPP文件
+ament_clang_format --reformat .
+```
