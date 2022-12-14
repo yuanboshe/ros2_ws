@@ -1,6 +1,8 @@
 # aicrobo ros2_ws
 
-## 下载工程代码
+## 工程开发
+
+### 下载工程代码
 
 将需要开发的ros2 package clone到src目录下
 
@@ -14,15 +16,22 @@ vcs import src < src/vcs_repos/mini.repos
 sudo apt install python3-pip && pip install -U vcstool
 ```
 
-## 安装依赖包
+### 安装依赖包
 
 vscode界面 -> Terminal菜单 -> Run Task -> (下拉框选择) install dependencies
 
-## 编译
+### 编译
 
 vscode界面 -> Terminal菜单 -> Run Task -> (下拉框选择) build
 
-## 特性
+## ros2_ws特性
+
+### 安装插件
+
+```bash
+#使用脚本安装
+cd ~/ros2_ws/scripts && ./code-server.sh
+```
 
 ### CPP format
 

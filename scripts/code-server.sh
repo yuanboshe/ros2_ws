@@ -12,6 +12,7 @@ WORK_PATH=$(pwd)
 #ms-python.python: python format
 #redhat.vscode-yaml: yaml format
 #redhat.vscode-xml: xml format
+#timonwong.shellcheck: shell 规范提示
 code-server --install-extension llvm-vs-code-extensions.vscode-clangd \
     --install-extension cheshirekow.cmake-format \
     --install-extension mhutchie.git-graph \
@@ -19,7 +20,8 @@ code-server --install-extension llvm-vs-code-extensions.vscode-clangd \
     --install-extension twxs.cmake \
     --install-extension ms-python.python \
     --install-extension redhat.vscode-yaml \
-    --install-extension redhat.vscode-xml
+    --install-extension redhat.vscode-xml \
+    --install-extension timonwong.shellcheck
 
 #cheshirekow.cmake-format的依赖
 pip install cmakelang
