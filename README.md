@@ -31,6 +31,11 @@ vscode界面 -> Terminal菜单 -> Run Task -> (下拉框选择) build
 ```bash
 #使用脚本安装
 cd ~/ros2_ws/scripts && ./code-server.sh
+
+#bug解决
+#/usr/lib/code-server/lib/vscode/bin/remote-cli/code-server: 12: /usr/lib/code-server/lib/vscode/node: not found
+sudo ln -s /usr/lib/code-server/lib/node /usr/lib/code-server/lib/vscode
+#执行上面的命令后再使用脚本安装
 ```
 
 ### CPP format
