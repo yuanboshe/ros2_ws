@@ -233,7 +233,7 @@
             "label": "install dependencies",
             "detail": "Install all dependencies specified in the workspaces package.xml files.",
             "type": "shell",
-            "command": "sudo apt-get update && rosdepc update && rosdepc install --from-paths src --ignore-src -y",
+            "command": "sudo apt-get update && rosdep update && rosdep install --from-paths src --ignore-src -y",
             "problemMatcher": []
         }
     ],
