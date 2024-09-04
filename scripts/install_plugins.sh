@@ -1,19 +1,26 @@
 #!/bin/bash
+set -e
 
-# 环境变量
-cd "$(dirname "$0")" || exit $?
-WORK_PATH=$(pwd)
+# check if VSCode or code-server installed
+if command -v code &> /dev/null; then
+    CMD=code
+elif command -v code-server &> /dev/null; then
+    CMD=code-server
+else
+    echo "Neither VSCode nor code-server is installed."
+    exit 1
+fi
 
-#llvm-vs-code-extensions.vscode-clangd: CPP格式化，提示等功能。首次打开CPP会要求下载后台程序。
-#cheshirekow.cmake-format: CMakeLists.txt格式化
+#llvm-vs-code-extensions.vscode-clangd: CPP format notice
+#cheshirekow.cmake-format: CMakeLists.txt format
 #mhutchie.git-graph: git graph
 #foxundermoon.shell-format: format shell
 #twxs.cmake: colorize cmake files
 #ms-python.python: python format
 #redhat.vscode-yaml: yaml format
 #redhat.vscode-xml: xml format
-#timonwong.shellcheck: shell 规范提示
-code-server --install-extension llvm-vs-code-extensions.vscode-clangd \
+#timonwong.shellcheck: shell stander notice
+${CMD} --install-extension llvm-vs-code-extensions.vscode-clangd \
     --install-extension cheshirekow.cmake-format \
     --install-extension mhutchie.git-graph \
     --install-extension foxundermoon.shell-format \
@@ -23,5 +30,5 @@ code-server --install-extension llvm-vs-code-extensions.vscode-clangd \
     --install-extension redhat.vscode-xml \
     --install-extension timonwong.shellcheck
 
-#cheshirekow.cmake-format的依赖
-pip install cmakelang
+#the dependence of cheshirekow.cmake-format
+sudo apt install python3-pip && pip install cmakelang

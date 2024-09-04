@@ -6,9 +6,14 @@
         // Build tasks
         {
             "label": "build",
-            "detail": "Build workspace (default)",
+            "detail": "Build workspace (sequential)",
             "type": "shell",
-            "command": "colcon build --executor sequential --symlink-install --cmake-args '-DCMAKE_BUILD_TYPE=RelWithDebInfo' '-DCMAKE_EXPORT_COMPILE_COMMANDS=On' -Wall -Wextra -Wpedantic",
+            "command": "./scripts/build.sh",
+            "options": {
+                "env": {
+                    "OPTION_SEQUENTIAL": "--executor sequential"
+                }
+            },
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -17,9 +22,9 @@
         },
         {
             "label": "build parallel",
-            "detail": "Build workspace",
+            "detail": "Build workspace (parallel)",
             "type": "shell",
-            "command": "colcon build --parallel-workers 2 --symlink-install --cmake-args '-DCMAKE_BUILD_TYPE=RelWithDebInfo' '-DCMAKE_EXPORT_COMPILE_COMMANDS=On' -Wall -Wextra -Wpedantic",
+            "command": "./scripts/build.sh",
             "group": {
                 "kind": "build"
             },
@@ -29,7 +34,12 @@
             "label": "debug",
             "detail": "Build workspace (debug)",
             "type": "shell",
-            "command": "colcon build --executor sequential --symlink-install --cmake-args '-DCMAKE_BUILD_TYPE=Debug' -Wall -Wextra -Wpedantic",
+            "command": "./scripts/build.sh",
+            "options": {
+                "env": {
+                    "BUILD_TYPE": "Debug"
+                }
+            },
             "group": "build",
             "problemMatcher": "$gcc"
         },
@@ -38,7 +48,7 @@
             "label": "test",
             "detail": "Run all unit tests and show results.",
             "type": "shell",
-            "command": "colcon test --symlink-install; colcon test-result",
+            "command": "colcon test --merge-install --symlink-install; colcon test-result --verbose",
             "group": {
                 "kind": "test",
                 "isDefault": true
@@ -49,7 +59,7 @@
             "label": "clean",
             "detail": "Run the clean target",
             "type": "shell",
-            "command": "colcon build --cmake-target clean",
+            "command": "colcon build --merge-install --cmake-target clean",
             "problemMatcher": "$gcc"
         },
         {
@@ -57,6 +67,13 @@
             "detail": "Purge workspace by deleting all generated files.",
             "type": "shell",
             "command": "rm -fr build install log; py3clean .",
+            "problemMatcher": []
+        },
+        {
+            "label": "source",
+            "detail": "Source workspace",
+            "type": "shell",
+            "command": "source /opt/ros/humble/setup.bash",
             "problemMatcher": []
         },
         // Linting and static code analysis tasks

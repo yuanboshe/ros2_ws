@@ -6,10 +6,9 @@
     "configurations": [
         {
             "name": "ROS: Launch",
+            "type": "ros",
             "request": "launch",
-            "target": "/xxx.launch.py",
-            "launch": "[rviz, gz, gzclient, gzserver]",
-            "type": "ros"
+            "target": "${workspaceFolder}/src/ros2_demos_cpp/launch/topics/talker_listener.launch.py",
         },
         {
             "name": "ROS: Attach",
